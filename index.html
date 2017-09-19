@@ -19,10 +19,9 @@
           mapTypeId: google.maps.MapTypeId.TERRAIN,
           zoom: 16
         });
-        var infoWindow = new google.maps.InfoWindow({
-          content: '東京工芸大学',
+        var marker = new google.maps.Marker({
           position: {lat:35.462906, lng:139.330869},
-          pixelOffset: new google.maps.Size(0, -50)
+          map: map
         });
         infoWindow.setMap(map);
       }
