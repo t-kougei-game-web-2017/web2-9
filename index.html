@@ -6,21 +6,12 @@
     <title>Google Maps API サンプル</title>
     <style type="text/css">
       html, body { height: 100%; margin: 0; padding: 0; }
-      #map { height: 90%; }
+      #map { height: 100%; }
     </style>
   </head>
   <body>
     <div id="map"></div>
 
-    <form>
-      <p>
-        <input type="button" value="ROADMAP" onclick="changeMapType('roadmap')">
-        <input type="button" value="SATELLITE" onclick="changeMapType('satellite')">
-        <input type="button" value="HYBRID" onclick="changeMapType('hybrid')">
-        <input type="button" value="TERRAIN" onclick="changeMapType('terrain')">
-      </p>
-    </form>
-    
     <script type="text/javascript">
       var map;
       function initMap() {
@@ -30,10 +21,12 @@
           zoom: 16
         });
       }
-      
-      function changeMapType(type){
-        map.setMapTypeId(type);
-      }
+      var infoWindow = new google.maps.InfoWindow({
+        content: '東京工芸大学',
+        position: {lat:35.462906, lng:139.330869},
+        pixelOffset: new google.maps.Size(0, -50)
+      });
+      infoWindow.setMap(map);
     </script>
 
     <script async defer
