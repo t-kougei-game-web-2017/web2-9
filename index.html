@@ -22,8 +22,9 @@
     </form>
     
     <script type="text/javascript">
+      var map;
       function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'),{
+        map = new google.maps.Map(document.getElementById('map'),{
           center: {lat:35.462906, lng:139.330869},
           mapTypeId: google.maps.MapTypeId.TERRAIN,
           zoom: 16
